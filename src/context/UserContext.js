@@ -27,11 +27,11 @@ export const UserContextProvider = ({ children }) => {
         const savedUsers = JSON.parse(localStorage.getItem('users'));
         if (savedUsers)
             setUsers(savedUsers);
-    }, [formValues]);
+    }, [users]);
 
     useEffect(() => {
         localStorage.setItem('users', JSON.stringify(formValues));
-    }, [users]);
+    }, [formValues]);
 
 
     return (
