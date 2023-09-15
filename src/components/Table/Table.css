@@ -1,0 +1,39 @@
+.table-fix-head {
+  height: 80vh;
+  overflow: auto;
+}
+.table-fix-head .table__head {
+  position: sticky;
+  top: 0;
+}
+
+.table {
+  position: relative;
+  width: 100vw;
+  border-collapse: collapse;
+}
+
+.table__head {
+  background-color: var(--color-grey);
+  border-radius: 5px;
+}
+
+.table__head_light-theme {
+  background-color: var(--color-lightgrey);
+}
+
+.table__head-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+.table__item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.table__row:hover {
+  background-color: var(--color-green);
+}

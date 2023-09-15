@@ -1,0 +1,89 @@
+.main-container {
+  height: 100%;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.light-theme {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.dark-theme {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.insert-section {
+  width: 35%;
+  position: relative;
+}
+
+.insert-section__heading {
+  position: absolute;
+  top: -7px;
+  left: 15px;
+  background-color: var(--color-dark);
+}
+
+.insert-section__heading_light-theme {
+  background-color: var(--color-light);
+}
+
+.table-section {
+  width: 60%;
+}
+
+.section__wrapper {
+  padding: 10px;
+  border: 1.5px solid var(--color-grey);
+  border-radius: 5px;
+}
+
+.section__wrapper_light-theme {
+  border-color: var(--color-lightgrey);
+}
+
+.base-button {
+  padding: 10px 40px;
+  color: var(--color-light);
+  background-color: var(--color-grey);
+  border: none;
+  border-radius: 5px;
+}
+
+.base-button_light-theme {
+  background-color: var(--color-lightgrey);
+  color: var(--color-dark);
+}
+
+.line {
+  width: 80%;
+  margin: 0 auto 20px auto;
+  border-top: 1px solid var(--color-grey);
+}
+
+.line_light-theme {
+  border-color: var(--color-lightgrey);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .main-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .insert-section,
+  .table-section {
+    width: 100%;
+  }
+}

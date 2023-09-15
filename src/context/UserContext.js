@@ -3,7 +3,9 @@ import { createContext, useEffect, useState } from "react";
 export const UserContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
-    const [users, setUsers] = useState([]);
+    const savedUsers = JSON.parse(localStorage.getItem('users'));
+
+    const [users, setUsers] = useState(savedUsers && savedUsers.length ? savedUsers : []);
     const [formValues, setFormValues] = useState([]);
 
     const [initialValues, setInitialValues] = useState({
@@ -24,13 +26,11 @@ export const UserContextProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        const savedUsers = JSON.parse(localStorage.getItem('users'));
-        if (savedUsers)
-            setUsers(savedUsers);
-    }, [users]);
-
-    useEffect(() => {
+        if (!formValues || !formValues.length) {
+            return
+        }
         localStorage.setItem('users', JSON.stringify(formValues));
+        setUsers(formValues);
     }, [formValues]);
 
 

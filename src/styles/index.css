@@ -1,8 +1,17 @@
+@import "./normalize.css";
+
 :root {
   --color-dark: rgb(53, 53, 53);
-  --color-light: rgb(242, 240, 240);
-  --color-grey: rgb(156, 156, 156);
-  --color-green: rgb(62, 133, 62);
+  --color-light: rgb(255, 255, 255);
+  --color-grey: rgb(115, 114, 114);
+  --color-lightgrey: rgb(204, 204, 204);
+  --color-green: rgb(56, 121, 56);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -10,6 +19,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+
+  font-size: 14px;
+  font-weight: 300;
+  background-color: var(--color-dark);
 }
 
 code {
