@@ -1,5 +1,5 @@
 .table-fix-head {
-  height: 80vh;
+  height: 50vh;
   overflow: auto;
 }
 .table-fix-head .table__head {
@@ -9,7 +9,7 @@
 
 .table {
   position: relative;
-  width: 100vw;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -23,8 +23,7 @@
 }
 
 .table__head-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 10px;
   font-weight: 300;
 }
 
